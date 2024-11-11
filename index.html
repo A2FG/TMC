@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMC</title>
+    <link rel="icon" href="photo/icons/TMC.png" type="image/x-icon">
+    <style>
+        body {
+          font-family: 'Alexandria', sans-serif;
+          background-color: #F5DFBB; 
+          margin: 0;
+          padding: 20px;
+          direction: rtl;
+          text-align: right;
+          color: #562C2C; 
+        }
+        
+        header {
+          background: #127475; 
+          padding: 20px;
+          text-align: center;
+          border-radius: 8px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        header img {
+          max-width: 100%;
+          height: auto;
+          display: block;
+          margin: 0 auto;
+        }
+        
+        .container {
+          max-width: 800px;
+          margin: 20px auto;
+          background: #FFFFFF; 
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+          color: #F2542D; 
+          text-align: center;
+          margin: 20px 0;
+        }
+        
+        h3 {
+          color: #FFFFFF;
+          background-color: #562C2C; 
+          padding: 10px;
+          border-radius: 5px;
+          text-align: center;
+          margin: 15px 0;
+        }
+        
+        li {
+          background-color: #F5DFBB; 
+          padding: 10px;
+          border-radius: 5px;
+          margin: 5px 0;
+          transition: background-color 0.3s ease;
+        }
+        
+        li:hover {
+          background-color: #F2C9A4; 
+          transform: translateY(-2px);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        p {
+          line-height: 1.5;
+          background-color: #F0E4D7; 
+          padding: 10px;
+          border-radius: 5px;
+          margin: 10px 0;
+        }
+        
+        p:hover {
+          background-color: #D9C2A2;
+          border-left: 5px solid #F2542D;
+          transition: background-color 0.3s ease, border-left 0.3s ease;
+        }
+        
+        footer {
+          text-align: center;
+          margin-top: 20px;
+          color: #7aaaee;
+          padding: 10px;
+          background-color: #562C2C; 
+          border-radius: 5px;
+        }
+        
+        ul {
+          list-style-type: square;
+          padding-left: 20px;
+        }
+        
+        .social-links {
+          display: flex;
+          justify-content: center;
+          margin-top: 10px;
+        }
+        
+        .social-links a {
+          margin: 0 10px;
+        }
+        
+        .social-icon {
+          width: 50px;
+          height: 50px;
+          transition: transform 0.2s;
+        }
+        
+        .social-icon:hover {
+          transform: scale(1.1);
+          filter: brightness(1.2);
+        }
+        
+        .dev-message {
+          font-family: 'Modak', sans-serif;
+          color: rgba(255, 255, 255, 0.5);
+          text-align: center;
+          margin-top: 10px;
+          font-size: 14px;
+          background-color: transparent;
+          padding: 0;
+          border: none;
+        }
+        
+        
+        .sidebar {
+          position: fixed;
+          top: 0;
+          right: -300px;
+          width: 250px;
+          height: 100%;
+          background-color: #F5DFBB;
+          box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+          padding: 30px;
+          transition: right 0.5s ease;
+          z-index: 1000;
+          overflow-y: auto;
+          border-radius: 10px 0 0 10px;
+        }
+        
+        .sidebar.active {
+          right: 0;
+        }
+        
+        .sidebar h3, .sidebar h4 {
+          font-size: 20px;
+          color: #562C2C;
+          margin-top: 0;
+        }
+        
+        .sidebar p, .sidebar ol {
+          font-size: 16px;
+          color: #562C2C;
+          line-height: 1.7;
+        }
+        
+        .close-btn {
+          background-color: transparent;
+          border: none;
+          font-size: 30px;
+          color: #333;
+          cursor: pointer;
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          transition: color 0.3s ease;
+        }
+        
+        .close-btn:hover {
+          color: #f44336;
+        }
+        
+        
+        .sidebar a, .sidebar button {
+          display: block;
+          text-decoration: none;
+          background-color: #0E9594; 
+          color: white;
+          padding: 12px;
+          border-radius: 5px;
+          margin: 10px 0;
+          text-align: center;
+          transition: background-color 0.3s ease;
+        }
+        
+        .sidebar a:hover, .sidebar button:hover {
+          background-color: #0C7A74;
+        }
+        </style>
+</head>
+<body>
+
+<header>
+    <img src="photo/home/TMCSMPL.png" alt="Minecraft Server Logo">
+</header>
+
+<div class="container">
+    <h2>مرحبًا بكم في السيرفر!</h2>
+    <p>هذا هو سيرفر ماينكرافت الذي يوفر تجربة لعب فريدة وممتعة. انضم إلينا واستمتع بوقت رائع!</p>
+
+    <h3>معلومات السيرفر:</h3>
+    <ul>
+        <li><strong>IP السيرفر:</strong> TitanMC.aternos.me:40842</li> 
+        <li><strong>الإصدار:</strong> 1.21</li>
+        <li><strong>نوع اللعبة:</strong> Java & Bedrock</li>
+    </ul>
+
+    <h3>كيفية الانضمام:</h3>
+    <p>1. افتح لعبة ماينكرافت.</p>
+    <p>2. اضغط على "Add Server" وأدخل IP السيرفر أعلاه.</p>
+    <p>3.ادخل الـPort</p>
+    <p>4. انقر على "Join Server"!</p>
+
+
+
+
+</div>
+
+<h3>كيفية استخدام الأوامر:</h3>
+<p>1. افتح نافذة الدردشة داخل اللعبة.</p>
+<p>2. اكتب الأمر الذي ترغب في تنفيذه، مثل <strong>help/</strong> أو <strong>spawn/</strong></p>
+<p>3. اضغط على مفتاح Enter لتطبيق الأمر.</p>
+<p>4. يمكنك الاطلاع على قائمة الأوامر المتاحة عبر كتابة <strong>help/</strong></p>
+
+
+<div class="commands-list">
+    <h3>قائمة الأوامر:</h3>
+    <ul>
+        <li><strong>help/</strong> - يعرض قائمة الأوامر المتاحة.</li>
+        <li><strong>spawn/</strong> - ينقلك إلى نقطة البداية في العالم.</li>
+        <li><strong><a href="#" id="claim-link">claim/</a></strong> - يحفظ منطقة كملك لك.</li>
+    </ul>
+</div>
+
+
+<div id="claim-sidebar" class="sidebar">
+    <h3>شرح أمر claim/</h3>
+    <p>يتيح لك هذا الأمر حفظ منطقة معينة كملك لك بحيث يمنع الآخرين من التعديل فيها. لاستخدامه، قم بكتابة <strong>claim/</strong> في الشات.</p>
+    
+    
+    <h4>طريقة الاستخدام:</h4>
+    <ol>
+        <li>افتح نافذة الدردشة داخل اللعبة.</li>
+        <li>اكتب <strong>claim/</strong> في الشات.</li>
+        <li>ستحصل على <strong>مجرفة ذهبية</strong> بعد ذلك قم بتحديد الزاوية الاولى و الثانية من الجهة المقابلة لها.</li>
+        <li>ستحصل على منطقة محمية لك فقط، لا يمكن للآخرين التعديل عليها.</li>
+        <li> يمكنك وثوق بشخص و اعطائه الصلاحية للوصول الى منطقتك عبر <strong>(اسم الاعب)trust /</strong></li>
+    </ol>
+</div>
+
+
+
+
+
+<footer>
+    <p>&copy; جميع الحقوق محفوظة لـ TitanMC</p>
+    <div class="social-links">
+        <a href="https://discord.gg/zGzSJGWQ" target="_blank">
+            <img src="photo/icons/discord-logo.png" alt="Discord" class="social-icon">
+        </a>
+        <a href="https://t.me/bucidoomodss" target="_blank">
+            <img src="photo/icons/telegram-logo.png" alt="Telegram" class="social-icon">
+        </a>
+        <a href="https://www.youtube.com/@a2fg" target="_blank">
+            <img src="photo/icons/youtube-logo.png" alt="YouTube" class="social-icon">
+        </a>
+    </div>
+    <p class="dev-message">Dev: AG10-A2FG</p> 
+</footer>
+
+
+<script>
+    const claimSidebar = document.getElementById("claim-sidebar");
+    const claimLink = document.getElementById("claim-link");
+
+  
+    claimLink.onclick = function(event) {
+        event.preventDefault();
+        claimSidebar.classList.toggle("active");
+    }
+</script>
+</script> 
+</body>
+</html>
