@@ -122,7 +122,6 @@ ul {
   border: none;
 }
 
-/* تصميم القائمة الجانبية */
 .sidebar {
   position: fixed;
   top: 0;
@@ -132,15 +131,15 @@ ul {
   background-color: #F5DFBB;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
   padding: 30px;
-  transition: right 0.5s ease;
-  z-index: 1000;
-  overflow-y: auto;
-  border-radius: 10px 0 0 10px;
+  transition: right 0.3s ease-in-out;
 }
 
 .sidebar.active {
-  right: 0;
+  right: 0; /* عندما يكون الكلاس active، القائمة ستظهر */
 }
+
+
+
 
 .sidebar h3, .sidebar h4 {
   font-size: 20px;
@@ -185,4 +184,29 @@ ul {
 
 .sidebar a:hover, .sidebar button:hover {
   background-color: #0C7A74; /* لون داكن للأزرار عند التمرير */
+}
+.server-status {
+  background-color: #F0E4D7;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#server-status {
+  font-weight: bold;
+}
+
+.online {
+  color: #4CAF50; /* أخضر */
+}
+
+.offline {
+  color: #F44336; /* أحمر */
+}
+
+#player-count {
+  font-weight: bold;
+  color: #562C2C; /* بني داكن */
 }
