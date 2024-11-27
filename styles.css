@@ -111,16 +111,16 @@ ul {
   filter: brightness(1.2);
 }
 
-.dev-message {
-  font-family: 'Modak', sans-serif;
-  color: rgba(255, 255, 255, 0.5);
-  text-align: center;
-  margin-top: 10px;
-  font-size: 14px;
-  background-color: transparent;
-  padding: 0;
-  border: none;
+/* تعديل الرابط داخل dev-message ليأخذ نفس لون النص */
+.dev-message a {
+  color: #562C2C; /* نفس لون النص */
+  text-decoration: none; /* إزالة التسطير */
 }
+
+.dev-message a:hover {
+  color: #F2542D; /* تغيير اللون عند التمرير */
+}
+
 
 .sidebar {
   position: fixed;
@@ -194,19 +194,37 @@ ul {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.status-container, .players-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* المسافة بين النص والصورة */
+}
+
+.status-container img, .players-container img {
+  width: 30px; /* تغيير الحجم حسب الحاجة */
+  height: 30px;
+  margin-left: 10px;
+}
+
+.status-container p, .players-container p {
+  margin: 0;
+}
+
+/* إضافة خصائص لتنسيق النصوص */
 #server-status {
   font-weight: bold;
 }
 
+#player-count {
+  font-weight: bold;
+}
+
+/* تخصيص الصور في حالة السيرفر أونلاين أو أوفلاين */
 .online {
   color: #4CAF50; /* أخضر */
 }
 
 .offline {
   color: #F44336; /* أحمر */
-}
-
-#player-count {
-  font-weight: bold;
-  color: #562C2C; /* بني داكن */
 }
