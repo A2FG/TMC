@@ -3,54 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تحديث TitanMC</title>
+    <title>TitanMC | سيرفر ماينكرافت</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="photo/icons/TMC.png" type="image/x-icon">
 </head>
 <body>
-    
-    <nav class="navbar">
+    <!-- القائمة العلوية -->
+    <header class="navbar">
         <div class="logo">
-            <img src="photo/home/TMCSMPL.png" alt="Logo">
+            <img src="photo/home/TMCSMPL.png" alt="TitanMC Logo">
         </div>
-        <ul class="nav-links">
-            <li><a href="#home">الرئيسية</a></li>
-            <li><a href="#info">معلومات السيرفر</a></li>
-            <li><a href="#commands">الأوامر</a></li>
-            <li><a href="#contact">تواصل معنا</a></li>
-        </ul>
-    </nav>
-
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="#info">معلومات السيرفر</a></li>
+                <li><a href="CMDS.html">الأوامر</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
     
-    <section id="home" class="hero">
+
+    <section id="home" class="hero fade-in">
         <div class="hero-content">
-            <h1>مرحبًا بكم في TitanMC</h1>
+            <h1>TitanMCمرحبا بكم في </h1>
             <p>تجربة لعب فريدة وممتعة بانتظاركم!</p>
         </div>
     </section>
-
-   
+    
     <section id="info" class="info">
         <h2>معلومات السيرفر</h2>
         <ul>
-            <li><strong>IP:</strong> TitanMC.aternos.me:40842</li>
+            <li>
+                <strong>IP:</strong> 
+                <span id="server-ip">TitanMC.aternos.me:40842</span>
+                <button id="copy-ip-btn" class="copy-btn"></button>
+            </li>
             <li><strong>الإصدار:</strong> 1.21</li>
             <li><strong>النوع:</strong> Java & Bedrock</li>
         </ul>
     </section>
-
     
-    <section id="commands" class="commands">
-        <h2>الأوامر الأساسية</h2>
-        <ul>
-            <li><strong>help/</strong> - يعرض قائمة الأوامر.</li>
-            <li><strong>spawn/</strong> - الانتقال إلى نقطة البداية.</li>
-            <li><strong>claim/</strong> - حفظ منطقة.</li>
-        </ul>
-    </section>
-
-   
-    <section id="contact" class="contact">
+    
+    
+    <section id="contact" class="contact fade-in">
         <h2>تواصل معنا</h2>
         <div class="social-links">
             <a href="https://discord.gg/zGzSJGWQ" target="_blank">
@@ -64,9 +60,13 @@
             </a>
         </div>
     </section>
+    
 
+    <!-- الفوتر -->
     <footer>
-        <p>&copy; 2024 جميع الحقوق محفوظة لـ TitanMC</p>
+        <div class="container">
+            <p>&copy; 2024 جميع الحقوق محفوظة لـ TitanMC</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
