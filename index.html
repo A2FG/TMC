@@ -3,100 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TMC</title>
+    <title>تحديث TitanMC</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="photo/icons/TMC.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
-
-<header>
-    <img src="photo/home/TMCSMPL.png" alt="Minecraft Server Logo">
-</header>
-
-<div class="container">
-    <h2>مرحبًا بكم في السيرفر!</h2>
-    <p>هذا هو سيرفر ماينكرافت الذي يوفر تجربة لعب فريدة وممتعة. انضم إلينا واستمتع بوقت رائع!</p>
-
-    <h3>معلومات السيرفر:</h3>
-    <ul>
-        <li><strong>IP السيرفر:</strong> TitanMC.aternos.me:40842</li>
-        <li><strong>الإصدار:</strong> 1.21</li>
-        <li><strong>نوع اللعبة:</strong> Java & Bedrock</li>
-    </ul>
-
-    <h3>كيفية الانضمام:</h3>
-    <p>1. افتح لعبة ماينكرافت.</p>
-    <p>2. اضغط على "Add Server" وأدخل IP السيرفر أعلاه.</p>
-    <p>3. ادخل الـPort</p>
-    <p>4. انقر على "Join Server"!</p>
-</div>
-
-<div class="server-status">
-    <h3>حالة السيرفر:</h3>
-    <div class="status-container">
-        <p id="server-status">جارٍ التحقق...</p>
-        <img id="status-icon" src="photo/icons/server-offline.png" alt="Server Status" class="status-icon" />
-    </div>
-    <div class="players-container">
-        <p>عدد اللاعبين الحالي: <span id="player-count">جارٍ التحقق...</span></p>
-        <img id="player-icon" src="photo/icons/player-offline.png" alt="Player Icon" class="player-icon" />
-    </div>
-</div>
-
-
-
-
-<h3>كيفية استخدام الأوامر:</h3>
-<p>1. افتح نافذة الدردشة داخل اللعبة.</p>
-<p>2. اكتب الأمر الذي ترغب في تنفيذه، مثل <strong>help/</strong> أو <strong>spawn/</strong></p>
-<p>3. اضغط على مفتاح Enter لتطبيق الأمر.</p>
-<p>4. يمكنك الاطلاع على قائمة الأوامر المتاحة عبر كتابة <strong>help/</strong></p>
-
-<div class="commands-list">
-    <h3>قائمة الأوامر:</h3>
-    <ul>
-        <li><strong>help/</strong> - يعرض قائمة الأوامر المتاحة.</li>
-        <li><strong>spawn/</strong> - ينقلك إلى نقطة البداية في العالم.</li>
-        <li><strong><a href="#" id="claim-link">claim/</a></strong> - يحفظ منطقة كملك لك.</li>
-    </ul>
-</div>
-
-<!-- Sidebar Section -->
-<div id="claim-sidebar" class="sidebar">
-    <button id="close-btn" class="close-btn">&times;</button>
-    <h3>شرح أمر claim/</h3>
-    <p>يتيح لك هذا الأمر حفظ منطقة معينة كملك لك بحيث يمنع الآخرين من التعديل فيها. لاستخدامه، قم بكتابة <strong>claim/</strong> في الشات.</p>
     
-    <h4>طريقة الاستخدام:</h4>
-    <ol>
-        <li>افتح نافذة الدردشة داخل اللعبة.</li>
-        <li>اكتب <strong>claim/</strong> في الشات.</li>
-        <li>ستحصل على <strong>مجرفة ذهبية</strong> بعد ذلك قم بتحديد الزاوية الاولى و الثانية من الجهة المقابلة لها.</li>
-        <li>ستحصل على منطقة محمية لك فقط، لا يمكن للآخرين التعديل عليها.</li>
-        <li> يمكنك وثوق بشخص و اعطائه الصلاحية للوصول الى منطقتك عبر <strong>(اسم الاعب)trust /</strong></li>
-    </ol>
-</div>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="photo/home/TMCSMPL.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#info">معلومات السيرفر</a></li>
+            <li><a href="#commands">الأوامر</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+    </nav>
 
-<footer>
-    <p>&copy; جميع الحقوق محفوظة لـ TitanMC</p>
-    <div class="social-links">
-        <a href="https://discord.gg/7Vg8QskgVs" target="_blank">
-            <img src="photo/icons/discord-logo.png" alt="Discord" class="social-icon">
-        </a>
-        <a href="https://t.me/bucidoomodss" target="_blank">
-            <img src="photo/icons/telegram-logo.png" alt="Telegram" class="social-icon">
-        </a>
-        <a href="https://www.youtube.com/@q.b4" target="_blank">
-            <img src="photo/icons/youtube-logo.png" alt="YouTube" class="social-icon">
-        </a>
-    </div>
-    <!-- إضافة رابط لتوجيه المستخدم عند الضغط على النص -->
-    <p class="dev-message">
-        Dev: <a href="https://guns.lol/a2fg" target="_blank">AG10-A2FG</a>
-    </p> 
-</footer>
+    
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>مرحبًا بكم في TitanMC</h1>
+            <p>تجربة لعب فريدة وممتعة بانتظاركم!</p>
+        </div>
+    </section>
 
+   
+    <section id="info" class="info">
+        <h2>معلومات السيرفر</h2>
+        <ul>
+            <li><strong>IP:</strong> TitanMC.aternos.me:40842</li>
+            <li><strong>الإصدار:</strong> 1.21</li>
+            <li><strong>النوع:</strong> Java & Bedrock</li>
+        </ul>
+    </section>
 
-<script src="script.js"></script> 
+    
+    <section id="commands" class="commands">
+        <h2>الأوامر الأساسية</h2>
+        <ul>
+            <li><strong>help/</strong> - يعرض قائمة الأوامر.</li>
+            <li><strong>spawn/</strong> - الانتقال إلى نقطة البداية.</li>
+            <li><strong>claim/</strong> - حفظ منطقة.</li>
+        </ul>
+    </section>
+
+   
+    <section id="contact" class="contact">
+        <h2>تواصل معنا</h2>
+        <div class="social-links">
+            <a href="https://discord.gg/zGzSJGWQ" target="_blank">
+                <img src="photo/icons/discord-logo.png" alt="Discord">
+            </a>
+            <a href="https://t.me/bucidoomodss" target="_blank">
+                <img src="photo/icons/telegram-logo.png" alt="Telegram">
+            </a>
+            <a href="https://www.youtube.com/@a2fg" target="_blank">
+                <img src="photo/icons/youtube-logo.png" alt="YouTube">
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 جميع الحقوق محفوظة لـ TitanMC</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
