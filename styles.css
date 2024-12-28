@@ -1,188 +1,203 @@
-
 body {
-  font-family: 'Alexandria', sans-serif;
-  background-color: #F5DFBB; 
+  font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding: 20px;
-  direction: rtl;
-  text-align: right;
-  color: #562C2C;
-}
-
-header {
-  background: #127475; 
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-header img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+  padding: 0;
+  background-color: #121212;
+  color: #FFFFFF;
+  line-height: 1.6;
 }
 
 .container {
-  max-width: 800px;
-  margin: 20px auto;
-  background: #FFFFFF;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  color: #F2542D; 
-  text-align: center;
-  margin: 20px 0;
-}
-
-h3 {
-  color: #FFFFFF;
-  background-color: #562C2C; 
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-  margin: 15px 0;
-}
-
-li {
-  background-color: #F5DFBB; 
-  padding: 10px;
-  border-radius: 5px;
-  margin: 5px 0;
-  transition: background-color 0.3s ease;
-}
-
-li:hover {
-  background-color: #F2C9A4; 
-  transform: translateY(-2px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-p {
-  line-height: 1.5;
-  background-color: #F0E4D7; 
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px 0;
-}
-
-p:hover {
-  background-color: #D9C2A2;
-  border-left: 5px solid #F2542D;
-  transition: background-color 0.3s ease, border-left 0.3s ease;
-}
-
-footer {
-  text-align: center;
-  margin-top: 20px;
-  color: #7aaaee;
-  padding: 10px;
-  background-color: #562C2C; 
-  border-radius: 5px;
-}
-
-ul {
-  list-style-type: square;
-  padding-left: 20px;
-}
-
-.social-links {
+.navbar {
+  position: fixed;
+  top: 10px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  width: 90%; 
+  max-width: 1000px; 
+  background-color: #1F1F1F; 
+  padding: 10px 20px;
+  border-radius: 30px; 
   display: flex;
-  justify-content: center;
-  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  z-index: 1000;
 }
 
-.social-links a {
+.navbar .logo img {
+  height: 40px; 
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00BFFF; 
+  transform: scale(1.1); 
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+      width: 95%; 
+  }
+
+  .nav-links {
+      flex-direction: column; 
+  }
+
+  .nav-links li {
+      margin: 10px 0;
+  }
+}
+
+.hero {
+  background-image: url('photo/home/MC.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 150px 20px;
+  color: #FFFFFF;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn-secondary {
+  background-color: #251e1e;
+  color: #00BFFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #00BFFF;
+  color: #FFFFFF;
+}
+
+.info, .commands, .contact {
+  background-color: #1F1F1F;
+  padding: 40px 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.info ul, .commands ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info li, .commands li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.social-links img {
+  width: 40px;
+  height: 40px;
   margin: 0 10px;
-}
-
-.social-icon {
-  width: 50px;
-  height: 50px;
   transition: transform 0.2s;
 }
 
-.social-icon:hover {
-  transform: scale(1.1);
-  filter: brightness(1.2);
+.social-links img:hover {
+  transform: scale(1.2);
 }
 
-.dev-message {
-  font-family: 'Modak', sans-serif;
-  color: rgba(255, 255, 255, 0.5);
+footer {
+  background-color: #121212;
   text-align: center;
-  margin-top: 10px;
+  padding: 20px;
+  color: #FFFFFF;
   font-size: 14px;
-  background-color: transparent;
-  padding: 0;
-  border: none;
+  opacity: 0; 
+  transform: translateY(50px); 
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: -300px;
-  width: 250px;
-  height: 100%;
-  background-color: #F5DFBB;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
-  padding: 30px;
-  transition: right 0.5s ease;
-  z-index: 1000;
-  overflow-y: auto;
-  border-radius: 10px 0 0 10px;
+footer.visible {
+  opacity: 1;
+  transform: translateY(0); 
 }
 
-.sidebar.active {
-  right: 0;
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
-.sidebar h3, .sidebar h4 {
-  font-size: 20px;
-  color: #562C2C;
-  margin-top: 0;
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+  }
 }
 
-.sidebar p, .sidebar ol {
-  font-size: 16px;
-  color: #562C2C;
-  line-height: 1.7;
+@keyframes slideUp {
+  from {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
 }
 
-.close-btn {
-  background-color: transparent;
-  border: none;
-  font-size: 30px;
-  color: #333;
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  transition: color 0.3s ease;
+#copy-ip-btn {
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.close-btn:hover {
-  color: #f44336;
+.copy-btn {
+  background-image: url('photo/icons/cpy.png'); 
+  background-size: cover; 
+  background-position: center; 
+  width: 30px; 
+  height: 30px; 
+  border: none; 
+  background-color: transparent; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  transition: transform 0.2s ease; 
 }
 
-
-.sidebar a, .sidebar button {
-  display: block;
-  text-decoration: none;
-  background-color: #0E9594; 
-  color: white;
-  padding: 12px;
-  border-radius: 5px;
-  margin: 10px 0;
-  text-align: center;
-  transition: background-color 0.3s ease;
+.copy-btn:hover {
+  transform: scale(1.1); 
 }
 
-.sidebar a:hover, .sidebar button:hover {
-  background-color: #0C7A74; 
+#copy-ip-btn.copied {
+  transform: scale(1.1);  
+  background-color: #4CAF50;  
+}
+
+section, .hero h1, .hero p, footer {
+  animation: slideUp 1s ease-out forwards;
 }
