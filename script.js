@@ -1,32 +1,45 @@
-const serverStatus = document.getElementById("server-status");
-const playerCount = document.getElementById("player-count");
+
+const copyButton = document.getElementById('copy-ip-btn');
+const serverIP = "TitanMC.aternos.me";  
+
+function copyIP() {
+    navigator.clipboard.writeText(serverIP)
+        .then(() => {
+           
+            copyButton.classList.add('copied');
+            
+           
+            alert("تم نسخ الـ IP بنجاح!");
+
+           
+            setTimeout(() => {
+                copyButton.classList.remove('copied');
+            }, 500);  
+        })
+        .catch(err => {
+            alert("حدث خطأ أثناء نسخ الـ IP.");
+            console.error('Error copying text: ', err);
+        });
+}
 
 
-const serverIP = "TitanMC.aternos.me";
-const serverPort = "40842"; 
+copyButton.addEventListener('click', copyIP);
 
 
-const apiUrl = `http://localhost:8080/status/${serverIP}:${serverPort}`; 
 
-fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-        if (data.status === "online") { 
-            serverStatus.textContent = "السيرفر أونلاين";
-            serverStatus.classList.add("online");
-            serverStatus.classList.remove("offline");
-            playerCount.textContent = data.players; 
-        } else {
-            serverStatus.textContent = "السيرفر أوفلاين";
-            serverStatus.classList.add("offline");
-            serverStatus.classList.remove("online");
-            playerCount.textContent = "0";
-        }
-    })
-    .catch(error => {
-        console.error("خطأ في الاتصال بالخادم:", error);
-        serverStatus.textContent = "تعذر التحقق من الحالة";
-        serverStatus.classList.add("offline");
-        serverStatus.classList.remove("online");
-        playerCount.textContent = "0";
-    });
+const sections = document.querySelectorAll('section, .hero h1, .hero p, footer');
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.5 
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
