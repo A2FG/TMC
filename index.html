@@ -51,17 +51,20 @@
 
 
 
-    <section id="server-status" class="server-status">
+    <section id="server-status">
         <h2>حالة السيرفر</h2>
-        <div class="status-info">
+        <div id="server-status-info">
+          <div>
             <img id="server-status-image" src="photo/icons/server-offline.png" alt="Server Status">
             <span id="server-status-text">غير متصل</span>
+          </div>
+          <div>
+            <img id="players-status-image" src="photo/icons/player-online.png" alt="Players">
+            <span id="players-status-text">0 لاعبين</span>
+          </div>
         </div>
-        <div class="player-info">
-            <img id="player-icon" src="photo/icons/player-online.png" alt="Players" />
-            <span id="player-count">--</span>
-        </div>
-    </section>
+      </section>
+
 
 
 
@@ -82,7 +85,6 @@
 
     <footer>
         <p>&copy; 2024 جميع الحقوق محفوظة لـ TitanMC</p>
-            <script src="script.js"></script>
     </footer>
 
     <script src="script.js"></script>
