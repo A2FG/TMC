@@ -137,15 +137,38 @@ body {
   text-align: center;
 }
 
-.info ul, .commands ul {
-  list-style: none;
-  padding: 0;
+.server-status {
+  background-color: #1F1F1F;
+  padding: 40px 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  text-align: center;
+  color: #FFFFFF;
 }
 
-.info li, .commands li {
+.status-info, .player-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   margin: 10px 0;
-  font-size: 18px;
 }
+
+.status-info img, .player-info img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s;
+}
+
+.status-info img:hover, .player-info img:hover {
+  transform: scale(1.1);
+}
+
+.player-info span {
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
 
 .social-links img {
   width: 40px;
@@ -225,3 +248,26 @@ footer.visible {
 section, .hero h1, .hero p, footer {
   animation: slideUp 1s ease-out forwards;
 }
+
+.hosted-by {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hosted-by span {
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+.hosted-by img {
+  height: 25px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hosted-by img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+}
+
