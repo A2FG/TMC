@@ -1,4 +1,3 @@
-
 const copyButton = document.getElementById('copy-ip-btn');
 const serverIP = "TitanMC.aternos.me";
 
@@ -17,59 +16,68 @@ function copyIP() {
         });
 }
 
-copyButton.addEventListener('click', copyIP);
-
+if (copyButton) {
+    copyButton.addEventListener('click', copyIP);
+}
 
 
 const sections = document.querySelectorAll('section, .hero h1, .hero p, footer');
 
 const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
 }, {
-  threshold: 0.5 
+    threshold: 0.5
 });
 
 sections.forEach(section => {
-  observer.observe(section);
+    observer.observe(section);
 });
 
 
-
 function fetchServerStatus() {
-  fetch('https://discordsrv.api/v1/status')
-      .then(response => response.json())
-      .then(data => {
-          const statusText = document.getElementById('server-status-text');
-          const statusImage = document.getElementById('server-status-image');
-          
-          if (data.status === 'online') {
-              statusText.textContent = 'أونلاين';
-              statusImage.src = 'photo/icons/server-online.png'; 
-          } else {
-              statusText.textContent = 'غير متصل';
-              statusImage.src = 'photo/icons/server-offline.png'; 
-          }
-      })
-      .catch(err => {
-          console.error('Error fetching server status: ', err);
-          document.getElementById('server-status-text').textContent = 'خطأ في تحميل البيانات';
-          document.getElementById('server-status-image').src = 'photo/icons/server-error.png'; // صورة الخطأ
-      });
+    fetch('https://discordsrv.api/v1/status')
+        .then(response => response.json())
+        .then(data => {
+            const statusText = document.getElementById('server-status-text');
+            const statusImage = document.getElementById('server-status-image');
+            const playerCount = document.getElementById('player-count');
+            const playerIcon = document.getElementById('player-icon');
+
+            if (data.status === 'online') {
+                statusText.textContent = 'أونلاين';
+                statusImage.src = 'photo/icons/server-online.png';
+                playerCount.textContent = data.players ? `${data.players.online}/${data.players.max}` : 'غير متوفر';
+                playerIcon.src = 'photo/icons/player-online.png';
+            } else {
+                statusText.textContent = 'غير متصل';
+                statusImage.src = 'photo/icons/server-offline.png';
+                playerCount.textContent = '--';
+                playerIcon.src = 'photo\icons\player-online.png';
+            }
+        })
+        .catch(err => {
+            console.error('Error fetching server status: ', err);
+            document.getElementById('server-status-text').textContent = 'خطأ في تحميل البيانات';
+            document.getElementById('server-status-image').src = 'photo/icons/server-error.png';
+            document.getElementById('player-count').textContent = '--';
+            document.getElementById('player-icon').src = 'photo/icons/player-error.png';
+        });
 }
 
-document.addEventListener('DOMContentLoaded', fetchServerStatus);
 
+document.addEventListener('DOMContentLoaded', fetchServerStatus);
 
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-menuToggle.addEventListener('click', () => {
-  console.log("الزر تم الضغط عليه");
-  navLinks.classList.toggle('active');
-});
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+}
