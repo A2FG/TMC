@@ -21,7 +21,7 @@ copyButton.addEventListener('click', copyIP);
 
 
 function fetchServerStatus() {
-    fetch('https://discordsrv.api/v1/status')
+    fetch('https://api.mcsrvstat.us/2/138.199.144.30:25589')
       .then(response => response.json())
       .then(data => {
           const statusText = document.getElementById('server-status-text');
