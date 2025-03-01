@@ -21,7 +21,7 @@ copyButton.addEventListener('click', copyIP);
 
 
 function fetchServerStatus() {
-    fetch('https://api.mcsrvstat.us/2/138.199.144.30:25589')
+    fetch('https://api.mcstatus.io/v2/status/java/titanmcx.falixsrv.me:33023')
       .then(response => response.json())
       .then(data => {
           const statusText = document.getElementById('server-status-text');
