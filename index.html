@@ -1,5 +1,84 @@
-<html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TitanMC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="photo/icons/TMC.png" type="image/x-icon">
+</head>
 <body>
-<h1>This site is Under maintenance <\h1>
-<\body>
-<\html> 
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="photo/home/TMCSMPL.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#info">معلومات السيرفر</a></li>
+            <li><a href="CMDS.html">الأوامر</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+        <button class="menu-toggle">☰</button>
+    </nav>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>TitanMC مـرحـبـا بـكـم فـي </h1>
+            <p>!تجربة لعب فريدة وممتعة بانتظاركم</p>
+        </div>
+    </section>
+
+    <section id="info" class="info">
+        <h2>معلومات السيرفر</h2>
+        <ul>
+            <li><strong>IP:</strong> TitanMcx.falixsrv.me</li>
+            <li><strong>Port:</strong>33023</li>
+            <li><strong>الإصدار:</strong> 1.21</li>
+            <li><strong>النوع:</strong> Java & Bedrock</li>
+        </ul>
+    </section>
+
+    <section id="server-status" class="status-section">
+        <div id="server-status-info" class="status-info">
+          <h3>حالة السيرفر:</h3>
+          <div id="server-status-text" class="status-text">جاري تحميل البيانات...</div>
+          <img id="server-status-image" src="photo/icons/server-error.png" alt="حالة السيرفر" class="status-img" />
+        </div>
+
+        <div id="players-status-info" class="status-info">
+          <h3>عدد اللاعبين:</h3>
+          <div id="players-status-text" class="status-text">جاري تحميل البيانات...</div>
+          <img id="players-status-image" src="photo/icons/player-online.png" alt="عدد اللاعبين" class="status-img" />
+        </div>
+      </section>
+
+
+
+
+    <footer>
+        <div class="footer-container">
+            <!-- قسم تواصل معنا -->
+            <div class="footer-section contact-info">
+                <h3>تواصل معنا</h3>
+                <p>:يمكنك الوصول إلينا عبر وسائل التواصل التالية</p>
+                <div class="social-links">
+                    <a href="https://discord.gg/zGzSJGWQ" target="_blank"><img src="photo/icons/discord-logo.png" alt="Discord"></a>
+                    <a href="https://t.me/bucidoomodss" target="_blank"><img src="photo/icons/telegram-logo.png" alt="Telegram"></a>
+                    <a href="https://www.youtube.com/@a2fg" target="_blank"><img src="photo/icons/youtube-logo.png" alt="YouTube"></a>
+                </div>
+            </div>
+            <div class="footer-section rights">
+                <h3>حقوق الموقع</h3>
+                <p>جميع الحقوق محفوظة © 2025</p>
+            </div>
+
+            <div class="footer-section laws-info">
+                <h3>القوانين</h3>
+                <p><a href="https://discord.com/channels/1252300011719622726/1315062675264241775" target="_blank">اضغط للتعرف على المزيد</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
