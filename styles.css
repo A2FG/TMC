@@ -1,4 +1,5 @@
 body {
+  position: relative;
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
@@ -88,6 +89,56 @@ body {
 
   .menu-toggle {
       display: none;
+  }
+}
+
+.skins-container {
+  position: relative;
+  margin-top: 30px;
+  height: 300px;
+}
+
+.skin-img {
+  width: 160px;
+  height: auto;
+  position: absolute;
+  z-index: 10;
+}
+
+.skin-top-left {
+  left: 5%;
+  top: 580px;
+}
+
+.skin-middle-right {
+  right: 5%;
+  top: 1010px;
+}
+
+.skin-bottom-left {
+  left: 5%;
+  bottom: -10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .skin-img {
+    width: 100px;
+  }
+
+  .skin-top-left {
+    top: 420px;
+    left: 10px;
+  }
+
+  .skin-middle-right {
+    top: 780px;
+    right: 10px;
+  }
+
+  .skin-bottom-left {
+    bottom: -20px;
+    left: 10px;
   }
 }
 
@@ -228,7 +279,6 @@ footer .rights a:hover {
   color: #FFFFFF;
 }
 
-
 footer .footer-section a:hover,
 footer .footer-section p:hover {
   color: #00BFFF;
@@ -298,7 +348,6 @@ footer .footer-section p {
   }
 }
 
-
 .nav-links a {
   color: #FFFFFF;
   text-decoration: none;
@@ -307,6 +356,6 @@ footer .footer-section p {
 }
 
 .nav-links a:hover {
-  color: #00BFFF; 
+  color: #00BFFF;
   transform: scale(1.1);
 }
