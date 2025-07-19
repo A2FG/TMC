@@ -1,4 +1,4 @@
-/* Reset & Base Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -54,7 +54,7 @@ body::before {
     padding: 0 20px;
 }
 
-/* Navigation */
+
 .navbar {
     position: fixed;
     top: 20px;
@@ -170,7 +170,7 @@ body::before {
     transition: all 0.3s ease;
 }
 
-/* Hero Section */
+
 .hero {
     min-height: 100vh;
     display: flex;
@@ -299,7 +299,7 @@ body::before {
     animation: fadeInUp 1s ease-out 0.9s both;
 }
 
-/* Buttons */
+
 .btn-primary,
 .btn-secondary {
     display: flex;
@@ -357,7 +357,7 @@ body::before {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Floating Skins */
+
 .floating-skin {
     position: absolute;
     width: 120px;
@@ -391,7 +391,7 @@ body::before {
     animation-delay: 4s;
 }
 
-/* Server Info Section */
+
 .server-info {
     padding: 100px 0;
     background: rgba(26, 26, 26, 0.3);
@@ -474,7 +474,7 @@ body::before {
     border: 1px solid rgba(0, 255, 136, 0.3);
 }
 
-/* Status Section */
+
 .status-section {
     padding: 100px 0;
     position: relative;
@@ -572,7 +572,7 @@ body::before {
     transition: width 1s ease;
 }
 
-/* Features Section */
+
 .features {
     padding: 100px 0;
     background: rgba(26, 26, 26, 0.3);
