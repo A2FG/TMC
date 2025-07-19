@@ -1,89 +1,230 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TitanMC</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="photo/icons/TMC.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">
-            <img src="photo/home/TMCL.png" alt="Logo" >
+        <div class="nav-container">
+            <div class="logo">
+                <img src="photo/home/TMCL.png" alt="TitanMC Logo" class="logo-img">
+                <span class="logo-text"></span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+                <li><a href="#info" class="nav-link">معلومات السيرفر</a></li>
+                <li><a href="CMDS.html" class="nav-link">الأوامر</a></li>
+                <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+            </ul>
+            
+            <button class="menu-toggle" aria-label="القائمة">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <ul class="nav-links">
-            <li><a href="#home">الرئيسية</a></li>
-            <li><a href="#info">معلومات السيرفر</a></li>
-            <li><a href="CMDS.html">الأوامر</a></li>
-            <li><a href="#contact">تواصل معنا</a></li>
-        </ul>
-        <button class="menu-toggle">☰</button>
     </nav>
 
     <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+        </div>
+        
         <div class="hero-content">
-            <h1>TitanMC مـرحـبـا بـكـم فـي </h1>
-            <p>!تجربة لعب فريدة وممتعة بانتظاركم</p>
-        </div>
-
-        <img src="photo/home/A2FG-LFR.png" alt="A2FG-Skin" class="skin-img skin-top-left">
-    </section>
-
-    <section id="info" class="info">
-        <h2>معلومات السيرفر</h2>
-        <ul>
-            <li><strong>IP:</strong> titanmcx.duckdns.org</li>
-            <li><strong>Port:</strong> 26015</li>
-            <li><strong>الإصدار:</strong> 1.21+</li>
-            <li><strong></strong> Java & Bedrock</li>
-        </ul>
-    </section>
-
-    <section id="server-status" class="status-section">
-        <img src="photo/home/Y8R-LFL.png" alt="AV-Skin" class="skin-img skin-middle-right">
-
-        <div id="server-status-info" class="status-info">
-            <h3>حالة السيرفر:</h3>
-            <div id="server-status-text" class="status-text">جاري تحميل البيانات...</div>
-            <img id="server-status-image" src="photo/icons/server-error.png" alt="حالة السيرفر" class="status-img" />
-        </div>
-
-        <div id="players-status-info" class="status-info">
-            <h3>عدد اللاعبين:</h3>
-            <div id="players-status-text" class="status-text">جاري تحميل البيانات...</div>
-            <img id="players-status-image" src="photo/icons/player-online.png" alt="عدد اللاعبين" class="status-img" />
-        </div>
-    </section>
-
-    <footer>
-
-        <img src="photo/home/Bucidoo_LFR.png" alt="Bucidoo-Skin" class="skin-img skin-bottom-left">
-
-        <div class="footer-container">
-            <div class="footer-section contact-info">
-                <h3>تواصل معنا</h3>
-                <p>:يمكنك الوصول إلينا عبر وسائل التواصل التالية</p>
-                <div class="social-links">
-                    <a href="https://discord.gg/mDmBKhjsjd" target="_blank"><img src="photo/icons/discord-logo-n.png" alt="Discord"></a>
-                    <a href="https://t.me/bucidoomodss" target="_blank"><img src="photo/icons/telegram-logo-n.png" alt="Telegram"></a>
-                    <a href="https://guns.lol/a2fg" target="_blank"><img src="photo/icons/devweb.png" alt="YouTube"></a>
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">مرحباً بكم في</span>
+                    <span class="title-brand">TitanMC</span>
+                </h1>
+                <p class="hero-description">تجربة لعب فريدة وممتعة بانتظاركم في أفضل سيرفر ماينكرافت عربي</p>
+                
+                <div class="hero-actions">
+                    <button class="btn-primary" id="copy-ip-btn">
+                        <span class="btn-icon">📋</span>
+                        <span class="btn-text">نسخ IP</span>
+                    </button>
+                    <a href="#info" class="btn-secondary">
+                        <span class="btn-text">المزيد من المعلومات</span>
+                        <span class="btn-arrow">↓</span>
+                    </a>
                 </div>
             </div>
+        </div>
+        
 
-            <div class="footer-section rights">
-                <h3>حقوق الموقع</h3>
-                <p>جميع الحقوق محفوظة © 2025</p>
-            </div>
 
-            <div class="footer-section laws-info">
-                <h3>القوانين</h3>
-                <p><a href="https://discord.com/channels/1252300011719622726/1315062675264241775" target="_blank">اضغط للتعرف على المزيد</a></p>
+    </section>
+
+
+    <section id="info" class="server-info">
+        <div class="container">
+            <h2 class="section-title">معلومات السيرفر</h2>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">🌐</div>
+                    <h3>عنوان IP</h3>
+                    <p class="server-ip">titanmcsrv.duckdns.org</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">🚪</div>
+                    <h3>المنفذ</h3>
+                    <p>20788</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">🎮</div>
+                    <h3>الإصدار</h3>
+                    <p>1.21+</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">📱</div>
+                    <h3>المنصات</h3>
+                    <p>Java & Bedrock</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🗺</div>
+                    <h3>ألموقع</h3>
+                    <p>Germany</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">❗</div>
+                    <h3>soon</h3>
+                    <p></p>
+                </div>
+                
+                
+
+
             </div>
         </div>
+    </section>
+
+
+    <section id="server-status" class="status-section">
+        <div class="container">
+            <h2 class="section-title">حالة السيرفر</h2>
+            
+            <div class="status-grid">
+                <div class="status-card" id="server-status-card">
+                    <div class="status-header">
+                        <img id="server-status-image" src="photo/icons/server-error.png" alt="حالة السيرفر" class="status-icon">
+                        <h3>حالة السيرفر</h3>
+                    </div>
+                    <div id="server-status-text" class="status-value">جاري التحقق...</div>
+                    <div class="status-indicator"></div>
+                </div>
+                
+                <div class="status-card" id="players-status-card">
+                    <div class="status-header">
+                        <img id="players-status-image" src="photo/icons/player-online.png" alt="عدد اللاعبين" class="status-icon">
+                        <h3>اللاعبون المتصلون</h3>
+                    </div>
+                    <div id="players-status-text" class="status-value">جاري التحقق...</div>
+                    <div class="status-bar">
+                        <div class="status-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">لماذا TitanMC؟</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>أداء عالي</h3>
+                    <p>خوادم قوية لضمان تجربة لعب سلسة ومستقرة</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>حماية متقدمة</h3>
+                    <p>نظام حماية شامل ضد الغش والتخريب</p>
+                </div>
+                
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>مجتمع نشط</h3>
+                    <p>لاعبون ودودون وإدارة متفاعلة على مدار الساعة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section contact-info">
+                    <h3>تواصل معنا</h3>
+                    <p>انضم إلى مجتمعنا عبر منصات التواصل المختلفة</p>
+                    <div class="social-links">
+                        <a href="https://discord.gg/mDmBKhjsjd" target="_blank" class="social-link discord">
+                            <img src="photo/icons/discord-logo-n.png" alt="Discord">
+                            <span>Discord</span>
+                        </a>
+                        <a href="https://t.me/bucidoomodss" target="_blank" class="social-link telegram">
+                            <img src="photo/icons/telegram-logo-n.png" alt="Telegram">
+                            <span>Telegram</span>
+                        </a>
+                        <a href="https://guns.lol/a2fg" target="_blank" class="social-link website">
+                            <img src="photo/icons/devweb.png" alt="Website">
+                            <span>الموقع</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section quick-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#info">معلومات السيرفر</a></li>
+                        <li><a href="CMDS.html">الأوامر</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section server-rules">
+                    <h3>القوانين والأحكام</h3>
+                    <p>تعرف على قوانين السيرفر وشروط الاستخدام</p>
+                    <a href="https://discord.com/channels/1252300011719622726/1315062675264241775" target="_blank" class="rules-link">
+                        اقرأ القوانين
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 TitanMC. جميع الحقوق محفوظة</p>
+                <div class="footer-decorative">
+                    <span class="decorative-block"></span>
+                    <span class="decorative-block"></span>
+                    <span class="decorative-block"></span>
+                </div>
+            </div>
+        </div>
+        
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
+<!--أذا تمد ايدك اكسرهه-->
