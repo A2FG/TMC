@@ -1,5 +1,5 @@
 const copyButton = document.getElementById('copy-ip-btn');
-const serverIP = "titanmcsrv.duckdns.org:26015";
+const serverIP = "titanmcsrv.duckdns.org:20788";
 
 function copyIP() {
     navigator.clipboard.writeText(serverIP)
@@ -19,7 +19,7 @@ function copyIP() {
 if (copyButton) copyButton.addEventListener('click', copyIP);
 
 function fetchServerStatus() {
-    fetch('https://api.mcstatus.io/v2/status/java/34.171.117.184:26015')
+    fetch('https://api.mcstatus.io/v2/status/java/5.252.100.36:20788')
         .then(response => response.json())
         .then(data => {
             const statusText = document.getElementById('server-status-text');
