@@ -1,5 +1,5 @@
-# My Static Website
+# TMC
 
-This is a simple static website deployed using GitHub Pages and GitHub Actions.
+طننا.
 
-> Edit this file as you like.
+> شعندك داخل هنانه رحمة لدينك
