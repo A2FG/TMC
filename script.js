@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
     const copyButton = document.getElementById('copy-ip-btn');
-    const serverIP = "titanmcsrv.duckdns.org:20788";
+    const serverIP = "titanmc.ivory.host:20788";
 
     function copyIP() {
         navigator.clipboard.writeText(serverIP)
